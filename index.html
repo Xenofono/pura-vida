@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Första uppgiften</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/aea87e89d8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/slideshow.css" />
+
+    <script src="toggle.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" id="banner"
+          >Pura Vida <i class="fas fa-plane"></i
+        ></a>
+        <!-- här ska länkar och sånt ligga senare -->
+        <div id="links">
+          <i class="fas fa-adjust"></i>
+          <a href="#beach">Stränder</a>
+          <a href="#mountain">Bergen</a>
+          <a href="#animal">Djuren</a>
+          <a href="#contact">Kontakta oss</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="slideshow-container">
+        <ul class="slideshow">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <a href="#beach">Börja ditt äventyr</a>
+      </section>
+
+      <!-- <section id="welcome">
+      </section> -->
+      <section class="section" id="beach">
+        <h2 class="section__title">
+          Stränderna <i class="fas fa-umbrella-beach"></i>
+        </h2>
+        <div class="section__content">
+          <div class="section__content__text">
+            <p>
+              <em>Costa Rica</em> har några av världens vackraste stränder, med
+              kust mot både Karribien och Stilla havet så finns hundratals
+              stränder att välja på som till exempel Manuel Antonio, en av
+              världens finaste stränder.
+            </p>
+            <ul>
+              <li>Världens vackraste stränder</li>
+              <hr />
+              <li>Surfmöjligheter i två hav</li>
+              <hr />
+              <li>Varmt året om</li>
+            </ul>
+          </div>
+          <div class="section__content__images">
+            <img src="images/playa3.jpg" alt="aerial beach" width="30%" />
+            <p>Playas</p>
+            <!-- <img
+              src="images/playa2.jpg"
+              alt="beach and horizon"
+              width="30%"
+            /> -->
+          </div>
+        </div>
+      </section>
+      <section class="section" id="mountain">
+        <h2 class="section__title">Bergen <i class="fas fa-mountain"></i></h2>
+        <div class="section__content">
+          <div class="section__content__text">
+            <p>
+              <em>Costa Rica</em> har höga berg och djupa dalar, här finns
+              aktiva vulkaner man kan besöka och faktiskt så ligger de flesta av
+              de större städerna uppe på en platå som ligger över en kilometer
+              över havsnivå.
+            </p>
+            <ul>
+              <li>Se aktiva vulkaner</li>
+              <hr />
+
+              <li>Höjder uppe bland molnen</li>
+              <hr />
+
+              <li>Underbara varma källor</li>
+            </ul>
+          </div>
+          <div class="section__content__images">
+            <img
+              src="images/mountain3.jpg"
+              alt="car and arenal"
+              srcset=""
+              width="30%"
+            />
+            <p>Montañas</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="animal">
+        <h2 class="section__title">Djuren <i class="fas fa-frog"></i></h2>
+        <div class="section__content">
+          <div class="section__content__text">
+            <p>
+              <em>Costa Rica</em> har världens största biologiska mångfald, det
+              existerar fler olika djurarter där än någon annanstans. På några
+              dagar i Costa Rica lär du se fler olika och spännande djur än du
+              sett på en livstid i Sverige.
+            </p>
+            <ul>
+              <li>Världens största biologiska mångfald</li>
+              <hr />
+
+              <li>Djur i alla regnbågens färger</li>
+              <hr />
+
+              <li>25% av landet är naturparker</li>
+            </ul>
+          </div>
+          <div class="section__content__images">
+            <img src="images/animal2.jpg" alt="racoon" srcset="" />
+            <p>Animales</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="contact">
+        <h2 class="section__title">
+          Kontakta oss <i class="fas fa-envelope"></i>
+        </h2>
+        <p>
+          Kontakta oss gärna för att höra mer!
+        </p>
+        <form action="" id="contact-form">
+          <input type="text" name="name" placeholder="Namn" />
+          <input type="text" name="email" placeholder="Epost" />
+          <textarea name="message" placeholder="Fråga"></textarea>
+          <input type="submit" value="Skicka in" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© Kristoffer Näsström 2020</p>
+    </footer>
+  </body>
+</html>
+
