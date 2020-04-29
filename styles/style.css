@@ -159,6 +159,10 @@ hr {
   order: -1;
 }
 
+#form-container{
+  margin-bottom: 2rem;
+}
+
 #contact-form {
   display: flex;
   flex-direction: column;

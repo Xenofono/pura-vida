@@ -13,3 +13,19 @@ const toggleRecipe = {
 };
 
 toggleFactory(toggleRecipe)();
+
+
+// const toggleForm = {
+//   toToggle: document.querySelector("#contact-form"),
+//   target: document.createElement("button"),
+//   toggleWidth: 9999,
+//   container: document.querySelector("#form-container"),
+//   targetText: "VISA FORMULÄR",
+//   prepend: true
+// }
+
+// toggleFactory(toggleForm)();
+$("#contact-form").hide()
+$("#form-btn").click(() => {
+  $("#contact-form").slideToggle();
+})

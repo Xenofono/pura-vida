@@ -5,15 +5,17 @@ frivillig text för elementet som ska toggla
 frivillig ihopfälld höjd på menyn
 frivillig utfälld höjd på menyn*/
 
-const nav = document.querySelector("nav");
+
 
 const toggleFactory = ({
   toToggle,
   target,
   toggleWidth,
+  container = document.querySelector("nav"),
+  prepend = false,
   targetText = "MENY",
-  navHeight = 75,
-  navHeightExpanded = 240,
+  containerHeight = 75,
+  containerHeightExpanded = 240,
 }) => {
   let show = true;
   const toggelFunc = () => {
@@ -23,24 +25,24 @@ const toggleFactory = ({
     if (!show && toggleLargeScreen) {
       toToggle.style.display = "block";
       show = !show;
-      nav.removeChild(target);
+      container.removeChild(target);
     } else if (show && !toggleLargeScreen) {
       toToggle.style.display = "none";
       show = !show;
-      nav.append(target);
+      prepend ? container.prepend(target) : container.append(target)
     }
   };
-  navSetup(navHeight, navHeightExpanded);
+  containerSetup(container, containerHeight, containerHeightExpanded);
 
-  setup(toToggle, target, targetText, toggelFunc);
+  setup(toToggle, target, container, targetText, toggelFunc);
   return toggelFunc;
 };
 
-const setup = (toToggle, target, targetText, toggelFunc) => {
+const setup = (toToggle, target, container, targetText, toggelFunc) => {
   target.innerText = targetText;
   target.addEventListener("click", () => {
-    //klass för att animera height transition på nav
-    nav.classList.toggle("expanded");
+    //klass för att animera height transition på container
+    container.classList.toggle("expanded");
 
     if (toToggle.style.display === "none") {
       toToggle.style.display = "flex";
@@ -54,13 +56,13 @@ const setup = (toToggle, target, targetText, toggelFunc) => {
   window.addEventListener("resize", toggelFunc);
 };
 
-const navSetup = (navHeight, navHeightExpanded) => {
-  nav.style.maxHeight = `${navHeight}px`;
-  nav.style.transitionDuration = "0.3s";
-  nav.style.transitionProperty = "max-height";
-  nav.style.transitionTimingFunction = "linear";
+const containerSetup = (container, containerHeight, containerHeightExpanded) => {
+  container.style.maxHeight = `${containerHeight}px`;
+  container.style.transitionDuration = "0.3s";
+  container.style.transitionProperty = "max-height";
+  container.style.transitionTimingFunction = "linear";
   const style = document.createElement("style");
   style.type = "text/css";
-  style.innerHTML = `.expanded {max-height: ${navHeightExpanded}px !important;}`;
-  nav.appendChild(style);
+  style.innerHTML = `.expanded {max-height: ${containerHeightExpanded}px !important;}`;
+  container.appendChild(style);
 };
