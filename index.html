@@ -14,6 +14,8 @@
     ></script>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/slideshow.css" />
+    <link rel="icon" href ="images/favicon.ico" type="image/png">
+
 
     <script src="toggle.js" defer></script>
     <script src="app.js" defer></script>
@@ -145,10 +147,11 @@
           Kontakta oss gärna för att höra mer!
         </p>
         <form action="" id="contact-form">
-          <input type="text" name="name" placeholder="Namn" />
-          <input type="text" name="email" placeholder="Epost" />
+          <input type="text" name="name" placeholder="Namn" pattern="\A[^\W\d_]+\z" title="Inga konstiga tecken i namnet"/>
+          <input type="date" name="date">
+          <input type="email" name="email" placeholder="Epost" />
           <textarea name="message" placeholder="Fråga"></textarea>
-          <input type="submit" value="Skicka in" />
+          <input type="submit" value="Skicka in" id="send"/>
         </form>
       </section>
     </main>

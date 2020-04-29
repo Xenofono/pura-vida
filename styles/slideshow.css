@@ -23,6 +23,8 @@
   border-radius: 2px;
   line-height: 50px;
   text-align:center;
+  animation: slidein 6s;
+  
 }
 
 #slideshow-container a:visited {
@@ -31,9 +33,14 @@
 }
 
 @keyframes slidein {
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity:0;
+  }
   100% {
-    opacity: 1;
-    margin: 0;
+    opacity:1;
   }
 }
 

@@ -174,8 +174,28 @@ hr {
 
 #contact-form input,
 #contact-form textarea {
-  width: 50%;
+  width: 60vw;
   align-self: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+#contact-form input{
+  height: 2rem;
+}
+
+#contact-form textarea{
+  height: 5rem;
+}
+
+#contact-form input[type="submit"]{
+  font-size: 1.5rem;
+  background: var(--secondary-color);
+  color: var(--main-color);
+  line-height: 0px;
+  outline: none;
+  border: none;
+  
 }
 
 button {
@@ -217,4 +237,9 @@ footer {
   .section__content {
     flex-direction: column;
   }
+
+  #contact-form input,
+#contact-form textarea {
+  width: 70vw;
+}
 }
