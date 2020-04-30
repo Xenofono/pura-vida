@@ -142,6 +142,7 @@ hr {
 
 .section__content__images img {
   width: 100%;
+  height: 100%;
   filter: contrast(110%);
 }
 
@@ -159,7 +160,7 @@ hr {
   order: -1;
 }
 
-#form-container{
+#form-container {
   margin-bottom: 2rem;
 }
 
@@ -184,24 +185,23 @@ hr {
   padding: 1rem;
 }
 
-#contact-form input{
+#contact-form input {
   height: 2rem;
   border: none;
 }
 
-#contact-form textarea{
+#contact-form textarea {
   height: 5rem;
   border: none;
 }
 
-#contact-form input[type="submit"]{
+#contact-form input[type="submit"] {
   font-size: 1.5rem;
   background: var(--secondary-color);
   color: var(--main-color);
   line-height: 0px;
   outline: none;
   border: none;
-  
 }
 
 button {
@@ -244,8 +244,16 @@ footer {
     flex-direction: column;
   }
 
+  .section__content__text {
+    padding: 2rem;
+  }
+
+  ul {
+    text-align: left;
+  }
+
   #contact-form input,
-#contact-form textarea {
-  width: 70vw;
-}
+  #contact-form textarea {
+    width: 70vw;
+  }
 }
