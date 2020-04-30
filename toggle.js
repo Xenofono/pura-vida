@@ -1,6 +1,8 @@
 /* fabrik för menytoggel, argumenten den tar är elementet som ska döljas/visas
 elementet som ska toggla menyn till och från
 vid vilken bredd på skärmen koden ska köras
+frivillig container, default är navelementet
+frivillig boolean om target så läggas först eller sist
 frivillig text för elementet som ska toggla
 frivillig ihopfälld höjd på menyn
 frivillig utfälld höjd på menyn*/
