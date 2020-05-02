@@ -1,3 +1,5 @@
+
+/* allows light&dark modes */
 :root {
   --main-color: #f9c5bd;
   --secondary-color: #7c677f;
@@ -9,7 +11,10 @@
   --secondary-color: #f9c5bd;
   --tercery-color: #8076a3;
 }
+/* *************** */
 
+
+/* everything has 0 margin and border-box for easier styling */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -21,6 +26,7 @@ body {
   transition: background 0.5s;
 }
 
+/* header section styling */
 nav {
   position: fixed;
   width: 100%;
@@ -70,6 +76,9 @@ a:visited {
   cursor: pointer;
 }
 
+/* **************** */
+
+/* Styling of sections */
 .section {
   text-align: center;
 }
@@ -160,10 +169,13 @@ hr {
   order: -1;
 }
 
+/* ***************** */
+/* Form styling */
 #form-container {
   margin-bottom: 2rem;
 }
 
+/* form blurs when not in focus, hover or active */
 #contact-form {
   display: flex;
   flex-direction: column;
@@ -215,12 +227,15 @@ button {
   letter-spacing: 2px;
 }
 
+/* ******************* */
+
 footer {
   background: var(--secondary-color);
   color: var(--main-color);
   text-align: center;
 }
 
+/* used to fade in navbar */
 @keyframes fadeIn {
   0% {
     opacity: 0;

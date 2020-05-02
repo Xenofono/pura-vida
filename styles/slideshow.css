@@ -1,3 +1,8 @@
+/* This file contains the styling for the slideshow as well as the button in the middle.
+The slideshow is an unordered list where every list-item has one of the images as a background.
+ each image has an a different delay on the animation that changes the opacity from 0 to 1 so they rotate
+ in and out, the animation is set to infinite*/
+
 #slideshow-container {
   position: relative;
   background: #000;
