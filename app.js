@@ -25,6 +25,7 @@ $("#form-btn").click(() => {
 });
 
 //prevent page from reloading and form from submitting if any input field is incorrect
+//if no field is incorrect the form is allowed to submit
 $("#contact-form").submit((e) => {
   for (let i = 0; i < e.target.length - 1; i++) {
     if (!validateForm(e.target[i])) {
@@ -51,9 +52,10 @@ function validateForm(target) {
         return false;
       }
       break;
+    //currently handled by HTML input type email
     case "email":
       break;
-    //check if the message is longer than 10 characters
+    //check if the message is shorter than 10 characters
     case "message":
       if (target.value.length < 10) {
         alert("Meddelandet måste vara över 10 tecken");
