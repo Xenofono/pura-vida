@@ -35,19 +35,19 @@ $("#contact-form").submit((e) => {
   }
 });
 
-function validateForm(target) {
-  switch (target.name) {
+function validateForm({ name, value }) {
+  switch (name) {
     //check if name contains numbers
     case "name":
       const pattern = new RegExp("\\d");
-      if (pattern.test(target.value)) {
+      if (pattern.test(value)) {
         alert("Namn kan bara innehålla bokstäver tyvärr");
         return false;
       }
       break;
     //check if date is in the future
     case "date":
-      if (Date.now() >= Date.parse(target.value)) {
+      if (Date.now() >= Date.parse(value)) {
         alert("Datum måste vara i framtiden");
         return false;
       }
@@ -57,7 +57,7 @@ function validateForm(target) {
       break;
     //check if the message is shorter than 10 characters
     case "message":
-      if (target.value.length < 10) {
+      if (value.length < 10) {
         alert("Meddelandet måste vara över 10 tecken");
         return false;
       }
