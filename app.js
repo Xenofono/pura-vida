@@ -35,7 +35,7 @@ $("#contact-form").submit((e) => {
   }
 });
 
-function validateForm({ name, value }) {
+const validateForm = ({ name, value }) => {
   switch (name) {
     //check if name contains numbers
     case "name":
@@ -48,7 +48,9 @@ function validateForm({ name, value }) {
     //check if date is in the future
     case "date":
       if (Date.now() >= Date.parse(value)) {
-        alert("Datum måste vara i framtiden");
+        alert(
+          "Datum måste vara i framtiden, för frågor om tidigare bokningar vänligen ring oss"
+        );
         return false;
       }
       break;
@@ -68,4 +70,4 @@ function validateForm({ name, value }) {
       return false;
   }
   return true;
-}
+};
